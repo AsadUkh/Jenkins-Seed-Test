@@ -3,14 +3,14 @@ pipeline {
 
   environment {
     // FOO will be available in entire pipeline
-   set FOO = "PIPELINE"
+   FOO = "PIPELINE"
   }
 
   stages {
     stage("local") {
       environment {
         // BAR will only be available in this stage
-      set  BAR = "STAGE"
+      BAR = "STAGE"
       }
       steps {
        // sh 'echo "FOO is $FOO and BAR is $BAR"'
